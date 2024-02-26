@@ -1,3 +1,7 @@
+:root {
+  --primary-color:#5632a1;
+}
+
 *{
  margin: 0;
  padding: 0;
@@ -20,9 +24,9 @@ body{
     padding: 30px;
 }
 
-#open-button{
+button.primary{
 border: none;
-background-color: mediumpurple;
+background-color: var(--primary-color);
 color:#FFF;
 font-size: 16px;
 padding: 9px 22px;
@@ -47,10 +51,99 @@ cursor: pointer;
 }
 
 .container .colum .head{
-background-color: mediumpurple;
+background-color: var(--primary-color);
 color: #FFF;
 padding: 15px;
 text-align: center;
 
 
 }
+
+
+#modal{
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ background-color: rgba(0, 0, 0, 0.5);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#modal .box {
+background-color: #FFF;
+width: 400px;
+border-radius: 7px;
+overflow: hidden;
+}
+
+#modal .box .head{
+display: flex;
+justify-content: space-between;
+padding: 15px 20px;
+border-bottom: 1px solid #DDD;
+}
+
+#modal .box .head span{
+font-size: 18px;
+font-weight: 700;
+color: #333;
+}
+
+#modal .box .head button{
+   border:none;
+   background: none;
+   font-size: 24px;
+   font-weight:700;
+   cursor: pointer;
+ }
+
+ #modal .box .form{
+    padding: 20px;
+
+ }
+
+ #modal .box .form-group{
+    margin-bottom: 15px;
+
+ }
+
+ #modal .box .form label{
+ display: block;
+ font-size: 14px;
+ color: #333;
+ margin-bottom: 5px;
+ }
+
+ #modal .box .form textarea ,
+ #modal .box .form select,
+ #modal .box .form input {
+ width: 100%;
+ border-radius: 7px;
+ font-size: 14px;
+ border: 1px solid #999;
+ color: #333;
+ }
+
+ #modal .box .form textarea  {
+padding: 10px 15px;
+ }
+
+ #modal .box .form select{
+    padding: 10px;
+ 
+ }
+
+ #modal .box .form input{
+    padding: 10px;
+ 
+ }
+
+ #modal .box .form button{
+    display: block;
+    margin-left:auto;
+ 
+ }
+

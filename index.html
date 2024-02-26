@@ -16,7 +16,7 @@
 
 <div class="header">
  <h1>Kanban Board</h1>
- <button id="open-button">Nova tarefa</button>
+ <button class="primary">Nova tarefa</button>
 </div>
 
  <div class="container">
@@ -59,7 +59,36 @@
 
 
 
+<div id="modal">
+  <div class="box">
+   <div class="head">
+    <span>Nova Tarefa</span>
+    <button>X</button>
+     </div>
+     <div class="form">
+      <div class="form-group">
+      <label for="description">Decrição</label>
+      <textarea id="description" rows="3"></textarea>
+     </div>
+      <div class="form-group">
+       <label for="priority">Prioridade</label>
+        <select>
+        <option>Baixa</option>
+        <option>Media</option>
+        <option>Alta</option>
+      </select>
+     </div>
+    
+        <div class="form-group">
+        <label for="">Prazo</label>
+        <input type="date" id="deadLine">
+        </div>
 
+        <button class="primary">Cadastrar</button>
+
+   </div>
+  </div>
+</div>
 
 </body>
 </html>
