@@ -3,6 +3,10 @@ const $descriptionInput = document.getElementById('description');
 const $priorityInput = document.getElementById('priority');
 const $deadLineInput = document.getElementById('deadLine');
 
+const $todoColumnBody = document.querySelector("#todoColumn .body");
+
+var todolist = [];
+
 function openModal() {
 $modal.style.display = "flex";
 }
@@ -11,10 +15,46 @@ function closeModal() {
 $modal.style.display = "none";
 }
 
-function creatTasks() {
-console.log($descriptionInput.value);
-console.log($priorityInput.value);
-console.log($deadLineInput.value);
+function generateCards(){
+const todoListHtml = todolist.map(function(task){
+const formattedDate = moment(task.deadLine).format('DD/MM/YYYY');
+return `
+  <div class="card">
+    <div class="info">
+     <b>Descrição: </b>
+     <spam>${task.description}</spam> 
+    </div>
 
+    <div class="info">
+     <b>Prioridade: </b>
+     <spam>${task.priority}</spam> 
+    </div>
+
+    <div class="info">
+     <b>Prazo:</b>
+     <spam>${formattedDate}</spam> 
+    </div>
+  </div>
+`;
+
+});
+
+$todoColumnBody.innerHTML = todoListHtml.join('');
+
+}
+
+function creatTasks() {
+const newTasks = {
+    description: $descriptionInput.value,
+    priority: $priorityInput.value,
+    deadLine: $deadLineInput.value,
+}
+
+todolist.push(newTasks);
+
+closeModal();
+generateCards();
+
+console.log(todolist);
 
 }

@@ -42,7 +42,7 @@ cursor: pointer;
     padding: 50px 0;
 }
 
-.container .colum{
+.container .column{
     width: 250px;
     height: 600px;
     background-color: #FFF;
@@ -50,12 +50,37 @@ cursor: pointer;
     overflow: hidden;
 }
 
-.container .colum .head{
+.container .column .head{
 background-color: var(--primary-color);
 color: #FFF;
 padding: 15px;
 text-align: center;
+}
 
+.container .column .body{
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ padding: 20px;
+
+}
+
+.container .column .body .card{
+   background-color: #eee;
+   border-radius: 7px;
+   padding: 10px;
+   display:flex;
+   flex-direction: column;
+   gap:10px;
+}
+
+.container .column .body .card .info{
+ font-size: 14px;
+ color: #333;
+ display: flex;
+ flex-direction: column;
+
+ 
 
 }
 
