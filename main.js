@@ -48,7 +48,25 @@ const newTasks = {
     description: $descriptionInput.value,
     priority: $priorityInput.value,
     deadLine: $deadLineInput.value,
-}
+};
+
+if($descriptionInput.value == ""){
+    alert('Por favor informe a Descrição');
+    console.log($descriptionInput.value);
+    return;
+};
+
+if($priorityInput.value == ""){
+    alert('Por favor informe a Prioridade');
+    console.log($priorityInput.value);
+    return;
+};
+
+if($deadLineInput.value == ""){
+    alert('Por favor informe a data');
+    console.log($deadLineInput.value);
+    return;
+};
 
 todolist.push(newTasks);
 
