@@ -19,28 +19,28 @@
  </div>
 
  <div class="container">
-    <div class="column" id="todoColumn">
+    <div class="column" data-column="1">
        <div class="head">
         <span>A Fazer</span>
         </div>
         <div class="body">
       </div>
     </div>
-   <div class="column">
+   <div class="column" data-column="2">
         <div class="head">
           <span>Em progresso</span>
         </div>
          <div class="body">
        </div>
     </div>
-     <div class="column">
+     <div class="column" data-column="3">
          <div class="head">
           <span>Finalizado</span>
          </div>
          <div class="body">
         </div>
      </div>
-      <div class="column">
+      <div class="column" data-column="4">
          <div class="head">
           <span>Arquivado</span>
          </div>
@@ -70,9 +70,18 @@
         <option>Alta</option>
       </select>
      </div>
+       <div class="form-group">
+        <label for="column" >Coluna</label>
+        <select id="column">
+        <option value="1">A Fazer</option>>
+        <option value="2">Em progresso</option>>
+        <option value="3">Finalizado</option>>
+        <option value="4">Arquivado</option>>
+       </select>
+     </div>
           <div class="form-group">
-          <label for="">Prazo</label>
-          <input type="date" id="deadLine">
+            <label for="">Prazo</label>
+            <input type="date" id="deadLine">
           </div>
           <button class="primary" onclick="creatTasks()" id="creationModeButton">Cadastrar</button>
           <button class="primary" onclick="updateTask()"id="editingModeButton">Salvar alterações</button>
