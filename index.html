@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-
-    <title>Kanban-JavaScript</title>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>Kanban-JavaScript</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -14,85 +12,75 @@
 
 <body>
 
-<div class="header">
- <h1>Kanban Board</h1>
- <button class="primary" onclick="openModal()">Nova tarefa</button>
-</div>
+ <div class="header">
+  <h1>Kanban Board</h1>
+  <button class="primary" onclick="openModal()">Nova tarefa</button>
+ </div>
 
  <div class="container">
-    
     <div class="column" id="todoColumn">
        <div class="head">
         <span>A Fazer</span>
-       </div>
+        </div>
         <div class="body">
       </div>
     </div>
-    <div class="column">
+   <div class="column">
         <div class="head">
-         <span>Em progresso</span>
+          <span>Em progresso</span>
         </div>
          <div class="body">
        </div>
-     </div>
+    </div>
      <div class="column">
-        <div class="head">
-         <span>Finalizado</span>
-        </div>
+         <div class="head">
+          <span>Finalizado</span>
+         </div>
          <div class="body">
-       </div>
+        </div>
      </div>
-     <div class="column">
-        <div class="head">
-         <span>Arquivado</span>
-        </div>
+      <div class="column">
+         <div class="head">
+          <span>Arquivado</span>
+         </div>
          <div class="body">
-       </div>
+        </div>
      </div>
  </div>
 
-
-
-
-
-
-
-
-
+<!-- Inicio do Modal -->
 <div id="modal">
   <div class="box">
-   <div class="head">
-    <span id="creationModeTitle">Nova Tarefa</span>
-    <span id="editingModeTitle">Editar Tarefa</span>
-    <button onclick="closeModal()">X</button>
+    <div class="head">
+     <span id="creationModeTitle">Nova Tarefa</span>
+     <span id="editingModeTitle">Editar Tarefa</span>
+     <button onclick="closeModal()">X</button>
      </div>
-     <div class="form" id="idInput">
+       <div class="form" id="idInput">
+       <div class="form-group">
+        <label for="description">Decrição</label>
+        <textarea id="description" rows="3"></textarea>
+       </div>
       <div class="form-group">
-      <label for="description">Decrição</label>
-      <textarea id="description" rows="3"></textarea>
-     </div>
-      <div class="form-group">
-       <label for="priority" >Prioridade</label>
+        <label for="priority" >Prioridade</label>
         <select id="priority">
         <option>Baixa</option>
         <option>Media</option>
         <option>Alta</option>
       </select>
      </div>
-    
-        <div class="form-group">
-        <label for="">Prazo</label>
-        <input type="date" id="deadLine">
-        </div>
-
-        <button class="primary" onclick="creatTasks()" id="creationModeButton">Cadastrar</button>
-        <button class="primary" onclick="updateTask()"id="editingModeButton">Salvar alterações</button>
-
-   </div>
+          <div class="form-group">
+          <label for="">Prazo</label>
+          <input type="date" id="deadLine">
+          </div>
+          <button class="primary" onclick="creatTasks()" id="creationModeButton">Cadastrar</button>
+          <button class="primary" onclick="updateTask()"id="editingModeButton">Salvar alterações</button>
+     </div>
   </div>
 </div>
 
 <script src="moment.js"></script>
 <script src="main.js"></script>
+
 </body>
 </html>
