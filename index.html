@@ -62,10 +62,11 @@
 <div id="modal">
   <div class="box">
    <div class="head">
-    <span>Nova Tarefa</span>
+    <span id="creationModeTitle">Nova Tarefa</span>
+    <span id="editingModeTitle">Editar Tarefa</span>
     <button onclick="closeModal()">X</button>
      </div>
-     <div class="form">
+     <div class="form" id="idInput">
       <div class="form-group">
       <label for="description">Decrição</label>
       <textarea id="description" rows="3"></textarea>
@@ -84,7 +85,8 @@
         <input type="date" id="deadLine">
         </div>
 
-        <button class="primary" onclick="creatTasks()">Cadastrar</button>
+        <button class="primary" onclick="creatTasks()" id="creationModeButton">Cadastrar</button>
+        <button class="primary" onclick="updateTask()"id="editingModeButton">Salvar alterações</button>
 
    </div>
   </div>
